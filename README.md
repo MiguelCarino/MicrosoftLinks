@@ -1,9 +1,9 @@
 # MicrosoftLinks
 Straight links to Microsoft services without corpo bs\
-Website: https://miguelcarino.github.io/MicrosoftLinks/\
+Website: https://miguelcarino.github.io/MicrosoftLinks/
 
-Links\
--\
+Links
+-
 Windows 11: https://www.microsoft.com/software-download/windows11  
 Windows Server: https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022  
 Microsoft 365: https://login.microsoftonline.com  
