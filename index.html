@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Products</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            width: 70%;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            animation: slideIn 1s ease-in-out;
+            background: transparent;
+        }
+
+        .grid-item p {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .sub-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        .sub-grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .sub-grid-item i {
+            font-size: 30px;
+            margin-bottom: 0.5rem;
+        }
+
+        .sub-grid-item a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .grid-item:hover, .sub-grid-item:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="logo">
+            <h1 class="title">Microsoft Products</h1>
+        </header>
+        <main class="main-grid" id="main-grid">
+            <!-- Grid items will be injected here by JavaScript -->
+        </main>
+    </div>
+    <script>
+        const categories = [
+            {
+                title: "Operating System",
+                services: [
+                    { name: "Windows 11", link: "#", icon: "fab fa-windows" },
+                    { name: "Windows Server", link: "#", icon: "fas fa-server" },
+                    { name: "Microsoft 365", link: "#", icon: "fab fa-microsoft" }
+                ]
+            },
+            {
+                title: "Web services",
+                services: [
+                    { name: "Office 365", link: "#", icon: "fab fa-microsoft" },
+                    { name: "Outlook", link: "https://login.live.com", icon: "fas fa-envelope" },
+                    { name: "OneDrive", link: "#", icon: "fas fa-cloud" }
+                ]
+            },
+            {
+                title: "Teams",
+                services: [
+                    { name: "Teams", link: "#", icon: "fas fa-users" }
+                    // Add more services as needed
+                ]
+            },
+            {
+                title: "Development Environment",
+                services: [
+                    { name: "Visual Studio", link: "#", icon: "fas fa-code" },
+                    { name: ".NET", link: "#", icon: "fas fa-dot-circle" },
+                    { name: "VS Code", link: "#", icon: "fas fa-code-branch" }
+                    // Add more services as needed
+                ]
+            }
+        ];
+
+        const mainGrid = document.getElementById('main-grid');
+
+        categories.forEach(category => {
+            const gridItem = document.createElement('div');
+            gridItem.classList.add('grid-item');
+
+            const categoryTitle = document.createElement('p');
+            categoryTitle.textContent = category.title;
+
+            gridItem.appendChild(categoryTitle);
+
+            const subGrid = document.createElement('div');
+            subGrid.classList.add('sub-grid');
+
+            category.services.forEach(service => {
+                const subGridItem = document.createElement('div');
+                subGridItem.classList.add('sub-grid-item');
+
+                const serviceIcon = document.createElement('i');
+                serviceIcon.className = service.icon;
+
+                const serviceLink = document.createElement('a');
+                serviceLink.href = service.link;
+                serviceLink.textContent = service.name;
+
+                subGridItem.appendChild(serviceIcon);
+                subGridItem.appendChild(serviceLink);
+                subGrid.appendChild(subGridItem);
+            });
+
+            gridItem.appendChild(subGrid);
+            mainGrid.appendChild(gridItem);
+        });
+    </script>
+</body>
+</html>
