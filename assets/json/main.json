@@ -1,4 +1,4 @@
-const categories = [
+[
     {
         "title": "Basic",
         "services": [
@@ -164,7 +164,7 @@ const categories = [
             { "name": "Microsoft Azure Enterprise Portal", "link": "https://ea.azure.com", "icon": "fas fa-building", "value": "Microsoft Azure Enterprise Portal" },
             { "name": "Microsoft FastTrack Includes App Assure", "link": "https://fasttrack.microsoft.com", "icon": "fas fa-fast-forward", "value": "Microsoft FastTrack Includes App Assure" },
             { "name": "Microsoft License Advisor", "link": "https://mla.microsoft.com", "icon": "fas fa-id-card", "value": "Microsoft License Advisor" },
-            { "name": "Microsoft "services" Hub", "link": "https://"services"hub.microsoft.com", "icon": "fas fa-hands-helping", "value": "Microsoft "services" Hub" },
+            { "name": "Microsoft services Hub", "link": "https://serviceshub.microsoft.com", "icon": "fas fa-hands-helping", "value": "Microsoft services Hub" },
             { "name": "Microsoft Volume Licensing eAgreements", "link": "https://eagreements.microsoft.com/", "icon": "fas fa-file-contract", "value": "Microsoft Volume Licensing eAgreements" },
             { "name": "Next Generation Volume Licensing", "link": "https://businessaccount.microsoft.com", "icon": "fas fa-file-contract", "value": "Next Generation Volume Licensing" },
             { "name": "Volume Licensing Service Center", "link": "https://www.microsoft.com/Licensing/servicecenter/", "icon": "fas fa-file-contract", "value": "Volume Licensing Service Center" }
@@ -230,7 +230,7 @@ const categories = [
         "title": "Health / Status Portals",
         "services": [
             { "name": "Microsoft Service health status Microsoft 365, Azure, Power Platform", "link": "https://status.cloud.microsoft", "icon": "fas fa-heartbeat", "value": "Microsoft Service health status Microsoft 365, Azure, Power Platform" },
-            { "name": "Microsoft 365 Service health status", "link": "https://portal.office.com/"services"tatus", "icon": "fas fa-heartbeat", "value": "Microsoft 365 Service health status" },
+            { "name": "Microsoft 365 Service health status", "link": "https://portal.office.com/servicestatus", "icon": "fas fa-heartbeat", "value": "Microsoft 365 Service health status" },
             { "name": "Microsoft 365 Service health status (Admin portal)", "link": "https://admin.microsoft.com/AdminPortal/Home#/servicehealth", "icon": "fas fa-heartbeat", "value": "Microsoft 365 Service health status (Admin portal)" },
             { "name": "Azure DevOps - Status", "link": "https://status.dev.azure.com", "icon": "fas fa-heartbeat", "value": "Azure DevOps - Status" },
             { "name": "Azure Service Health -> Service issues", "link": "https://portal.azure.com/?source=akams%2F#blade/Microsoft_Azure_Health/AzureHealthBrowseBlade/serviceIssues", "icon": "fas fa-heartbeat", "value": "Azure Service Health -> Service issues" },
@@ -274,10 +274,10 @@ const categories = [
             { "name": "Priva Privacy Risk Management Trial - 90-day", "link": "https://signup.microsoft.com/get-started/signup?products=e6b633e0-1b1e-4d95-b414-3ce9e8023c39", "icon": "fas fa-shield-alt", "value": "Priva Privacy Risk Management Trial - 90-day" },
             { "name": "Sign-up for Office 365 E3, 25 licenses trial, 30-day", "link": "https://signup.microsoft.com/get-started/signup?OfferId=B07A1127-DE83-4a6d-9F85-2C104BDAE8B4&dl=ENTERPRISEPACK&ali=1&products=cfq7ttc0k59j%3a0009&bac=1", "icon": "fas fa-shield-alt", "value": "Sign-up for Office 365 E3, 25 licenses trial, 30-day" },
             { "name": "Microsoft 365 Business Premium Trial, 1 Month", "link": "https://signup.microsoft.com/get-started/signup?products=53e11149-82f9-4bca-a7f2-8f72592e4f03&mproducts=CFQ7TTC0LCHC:0003&fmproducts=CFQ7TTC0LCHC:0003&culture=en-in&country=in&ali=1", "icon": "fas fa-shield-alt", "value": "Microsoft 365 Business Premium Trial, 1 Month" },
-            { "name": "Sign-up for Azure $200 US Credits in 3 months, 12 months free "services" trial", "link": "https://azure.microsoft.com/en-us/offers/ms-azr-0044p/", "icon": "fas fa-shield-alt", "value": "Sign-up for Azure $200 US Credits in 3 months, 12 months free "services" trial" },
+            { "name": "Sign-up for Azure $200 US Credits in 3 months, 12 months free services trial", "link": "https://azure.microsoft.com/en-us/offers/ms-azr-0044p/", "icon": "fas fa-shield-alt", "value": "Sign-up for Azure $200 US Credits in 3 months, 12 months free services trial" },
             { "name": "Sign-up for Dynamics 365 for 30 days trial", "link": "https://trials.dynamics.com", "icon": "fas fa-shield-alt", "value": "Sign-up for Dynamics 365 for 30 days trial" },
             { "name": "Sign-up for Microsoft 365 Developer Program trial", "link": "https://developer.microsoft.com/en-us/microsoft-365/dev-program", "icon": "fas fa-shield-alt", "value": "Sign-up for Microsoft 365 Developer Program trial" },
-            { "name": "Sign-up for Intune, 1-month trial", "link": "https://go.microsoft.com/fw"link"/?"link"id=2019088", "icon": "fas fa-shield-alt", "value": "Sign-up for Intune, 1-month trial" }
+            { "name": "Sign-up for Intune, 1-month trial", "link": "https://go.microsoft.com/fwlink/?linkid=2019088", "icon": "fas fa-shield-alt", "value": "Sign-up for Intune, 1-month trial" }
         ]
     },
     {
@@ -302,7 +302,7 @@ const categories = [
             { "name": "Microsoft Community", "link": "https://answers.microsoft.com", "icon": "fas fa-users", "value": "Microsoft Community" },
             { "name": "Microsoft Documentation", "link": "https://learn.microsoft.com/docs/", "icon": "fas fa-book", "value": "Microsoft Documentation" },
             { "name": "Microsoft Dynamics 365 and Power Platform Roadmap", "link": "https://experience.dynamics.com/releaseplans/", "icon": "fas fa-road", "value": "Microsoft Dynamics 365 and Power Platform Roadmap" },
-            { "name": "Microsoft Dynamics Lifecycle "services"", "link": "https://lcs.dynamics.com", "icon": "fas fa-cogs", "value": "Microsoft Dynamics Lifecycle "services"" },
+            { "name": "Microsoft Dynamics Lifecycle services", "link": "https://lcs.dynamics.com", "icon": "fas fa-cogs", "value": "Microsoft Dynamics Lifecycle services" },
             { "name": "Microsoft Events", "link": "https://events.microsoft.com", "icon": "fas fa-calendar-alt", "value": "Microsoft Events" },
             { "name": "Microsoft Exam Sandbox", "link": "https://mscertdemo.starttest.com/", "icon": "fas fa-pencil-alt", "value": "Microsoft Exam Sandbox" },
             { "name": "Microsoft Home Use Program", "link": "https://www.microsoft.com/home-use-program", "icon": "fas fa-home", "value": "Microsoft Home Use Program" },
@@ -315,7 +315,7 @@ const categories = [
             { "name": "Microsoft Training", "link": "https://learn.microsoft.com/training/", "icon": "fas fa-chalkboard-teacher", "value": "Microsoft Training" },
             { "name": "Microsoft Unlocked", "link": "https://unlocked.microsoft.com/", "icon": "fas fa-unlock", "value": "Microsoft Unlocked" },
             { "name": "Office 365 Anti-Spam IP Delist Portal", "link": "https://sender.office.com", "icon": "fas fa-bug", "value": "Office 365 Anti-Spam IP Delist Portal" },
-            { "name": "Office UI Fabric "icon"s", "link": "https://uifabric"icon"s.azurewebsites.net/", "icon": "fas fa-"icon"s", "value": "Office UI Fabric "icon"s" },
+            { "name": "Office UI Fabric icons", "link": "https://uifabricicons.azurewebsites.net/", "icon": "fas fa-icons", "value": "Office UI Fabric icons" },
             { "name": "Outlook Oauth Sandbox", "link": "https://myadevcenter.outlook.office365.com/", "icon": "fas fa-envelope-open", "value": "Outlook Oauth Sandbox" },
             { "name": "Outlook.com Smart Network Data Service", "link": "https://sendersupport.olc.protection.outlook.com/snds/index.aspx", "icon": "fas fa-envelope-open", "value": "Outlook.com Smart Network Data Service" },
             { "name": "Power BI Playground", "link": "https://playground.powerbi.com/", "icon": "fas fa-play", "value": "Power BI Playground" },
