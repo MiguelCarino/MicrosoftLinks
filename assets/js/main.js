@@ -3,9 +3,7 @@ fetch('assets/json/main.json')
     .then(data => {
         const categories = data; // Assign the parsed JSON data to the `categories` variable
 
-        // The rest of your JavaScript code goes here
         var allServices = categories.reduce((acc, category) => acc.concat(category.services), []);
-
         var mainGrid = document.getElementById('main-grid');
         var buttonRow = document.getElementById('button-row');
         var categoryTitle = document.getElementById('category-title');
@@ -18,6 +16,9 @@ fetch('assets/json/main.json')
             button.addEventListener('click', function() {
                 showCategory(index);
                 highlightButton(button);
+                // Clear search when a category is clicked
+                searchInput.value = '';
+                updateURL(null);
             });
             return button;
         }
@@ -67,6 +68,26 @@ fetch('assets/json/main.json')
                 return service.value.toLowerCase().includes(query.toLowerCase());
             });
             showCategory(-1, filteredServices);
+            updateURL(query);
+        }
+
+        function updateURL(query) {
+            const url = new URL(window.location);
+            if (query) {
+                url.searchParams.set('search', query);
+            } else {
+                url.searchParams.delete('search');
+            }
+            window.history.replaceState({}, '', url);
+        }
+
+        function loadInitialSearch() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('search');
+            if (searchQuery) {
+                searchInput.value = searchQuery;
+                filterLinks(searchQuery);
+            }
         }
 
         // Show the Basic category by default
@@ -82,6 +103,8 @@ fetch('assets/json/main.json')
             filterLinks(searchInput.value);
         });
 
+        // Ensure the grid is displayed first, then apply the search if needed
         showCategory(0);
+        loadInitialSearch();
     })
     .catch(error => console.error('Error loading or parsing main.json:', error));
