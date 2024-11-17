@@ -1,4 +1,4 @@
-fetch('assets/json/main.json')
+fetch('assets/json/solutions.json')
     .then(response => response.json())
     .then(data => {
         const categories = data; // Assign the parsed JSON data to the `categories` variable
