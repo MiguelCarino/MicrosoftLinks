@@ -2,7 +2,7 @@
     {
         "title": "Basic",
         "services": [
-            { "name": "Windows 11", "link": "https://www.microsoft.com/software-download/windows11", "icon": "fab fa-windows", "value": "Windows 11" },
+            { "name": "Windows 11", "link": "https://www.microsoft.com/software-download/windows11", "icon":"fab fa-windows", "value": "Windows 11"},
             { "name": "Outlook", "link": "https://login.live.com", "icon": "fas fa-envelope", "value": "Outlook" },
             { "name": "OneDrive", "link": "https://login.microsoftonline.com", "icon": "fas fa-cloud", "value": "OneDrive" },
             { "name": "Microsoft 365", "link": "https://login.microsoftonline.com", "icon": "fab fa-microsoft", "value": "Microsoft 365" },
@@ -20,7 +20,7 @@
         "services": [
             { "name": ".NET", "link": "https://dotnet.microsoft.com/en-us/download", "icon": "fas fa-dot-circle", "value": "dotnet,.net" },
             { "name": "Visual Studio", "link": "https://visualstudio.microsoft.com/downloads/", "icon": "fas fa-code", "value": "Visual Studio" },
-            { "name": "VS Code", "link": "https://code.visualstudio.com/download", "icon": "fas fa-code-branch", "value": "VS Code" },
+            { "name": "VS Code", "link": "https://code.visualstudio.com/download", "value": "VS Code", "windowscmd": "Microsoft.VisualStudioCode", "macoscmd": "--cask visual-studio-code", "linuxflatpak": "com.visualstudio.code"},
             { "name": "Powershell", "link": "https://github.com/PowerShell/PowerShell", "icon": "fas fa-terminal", "value": "Powershell" },
             { "name": ".NET Framework", "link": "https://dotnet.microsoft.com/en-us/download/dotnet-framework", "icon": "fas fa-cogs", "value": "dotnet,.net,framework" },
             { "name": "C++ Build Tools", "link": "https://visualstudio.microsoft.com/visual-cpp-build-tools/", "icon": "fas fa-tools", "value": "C++ Build Tools" },

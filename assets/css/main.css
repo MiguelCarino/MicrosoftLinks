@@ -89,6 +89,14 @@ body, html {
     gap: 1rem;
 }
 
+.sub-row {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
 .sub-grid-item {
     display: flex;
     flex-direction: column;
@@ -119,4 +127,22 @@ body, html {
 
 .sub-grid-item:hover {
     transform: scale(1.05);
+}
+
+.notification {
+    position: fixed; /* Fixed position to stay in view */
+    bottom: 20px; /* Distance from the top of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+    background-color: #278136; /* Background color similar to .selected */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensure it appears above other elements */
+    transition: opacity 0.5s ease; /* Smooth transition for fading out */
+    opacity: 1; /* Start fully visible */
+}
+
+/* Optional: Add a fade-out effect */
+.notification.fade-out {
+    opacity: 0; /* Fade out effect */
 }
