@@ -77,10 +77,6 @@ fetch('assets/json/solutions.json')
                 // Create a new div for the OS icons and apply the .sub-row class
                 var osIconsContainer = document.createElement('div');
                 osIconsContainer.classList.add('sub-row');
-
-                // Create a new div for the description with its class
-                var osIconsContainer = document.createElement('div');
-                osIconsContainer.classList.add('description');
             
                 // Create OS icons and add click event listeners
                 var serviceWindows = document.createElement('i');
