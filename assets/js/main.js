@@ -6,7 +6,6 @@ fetch('assets/json/solutions.json')
         var allServices = categories.reduce((acc, category) => acc.concat(category.services), []);
         var mainGrid = document.getElementById('main-grid');
         var buttonRow = document.getElementById('button-row');
-        var serviceText = document.getElementById('description');
         var categoryTitle = document.getElementById('category-title');
         var searchInput = document.getElementById('search-input');
         var activeButton = null;
@@ -176,9 +175,6 @@ fetch('assets/json/solutions.json')
                 osIconsContainer.appendChild(serviceRedhat);
                 osIconsContainer.appendChild(serviceSuse);
                 osIconsContainer.appendChild(serviceFlatpak);
-                
-                // Append the service text
-                document.body.appendChild(serviceText);
 
                 // Append the service icon to the subGridItem (not part of the link)
                 subGridItem.appendChild(serviceIcon);
@@ -186,6 +182,9 @@ fetch('assets/json/solutions.json')
                 // Append the service link to the subGridItem
                 subGridItem.appendChild(serviceLink);
                 
+                // Append the service text
+                subGridItem.appendChild(serviceText);
+
                 // Append the osIconsContainer to the subGridItem (not part of the link)
                 subGridItem.appendChild(osIconsContainer);
             
