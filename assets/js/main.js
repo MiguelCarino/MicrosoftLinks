@@ -77,7 +77,7 @@ fetch('assets/json/solutions.json')
             
                 // Create OS icons and add click event listeners
                 var serviceLinux = document.createElement('i');
-                serviceLinux.className = service.linux || 'fab fa-linux'; // Default to Linux icon if not provided
+                serviceLinux.className = service.linux || 'fab fa-redhat'; // Default to Linux icon if not provided
                 serviceLinux.dataset.value = "sudo dnf install " + service.linuxcmd; // Set the value to copy from JSON
                 if (service.linuxcmd) { // Only add click event if linuxcmd is present
                     serviceLinux.addEventListener('click', function(event) {
