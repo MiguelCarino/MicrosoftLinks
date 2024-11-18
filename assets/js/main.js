@@ -76,30 +76,6 @@ fetch('assets/json/solutions.json')
                 osIconsContainer.classList.add('sub-row');
             
                 // Create OS icons and add click event listeners
-                var serviceLinux = document.createElement('i');
-                serviceLinux.className = service.linux || 'fab fa-redhat'; // Default to Linux icon if not provided
-                serviceLinux.dataset.value = "sudo dnf install " + service.linuxcmd; // Set the value to copy from JSON
-                if (service.linuxcmd) { // Only add click event if linuxcmd is present
-                    serviceLinux.addEventListener('click', function(event) {
-                        event.stopPropagation(); // Prevent the click from bubbling up to the service link
-                        copyToClipboard(serviceLinux.dataset.value);
-                    });
-                } else {
-                    serviceLinux.style.display = 'none'; // Hide if no command is provided
-                }
-
-                var serviceLinuxf = document.createElement('i');
-                serviceLinuxf.className = service.linux || 'fab fa-linux'; // Default to Linux icon if not provided
-                serviceLinuxf.dataset.value = "flatpak install flathub " + service.linuxflatpak; // Set the value to copy from JSON
-                if (service.linuxflatpak) { // Only add click event if linuxcmd is present
-                    serviceLinuxf.addEventListener('click', function(event) {
-                        event.stopPropagation(); // Prevent the click from bubbling up to the service link
-                        copyToClipboard(serviceLinuxf.dataset.value);
-                    });
-                } else {
-                    serviceLinuxf.style.display = 'none'; // Hide if no command is provided
-                }
-
                 var serviceWindows = document.createElement('i');
                 serviceWindows.className = service.windows || 'fab fa-windows'; // Default to Windows icon if not provided
                 serviceWindows.dataset.value = "winget install -e --id " + service.windowscmd; // Set the value to copy from JSON
@@ -123,12 +99,36 @@ fetch('assets/json/solutions.json')
                 } else {
                     serviceMacos.style.display = 'none'; // Hide if no command is provided
                 }
+
+                var serviceLinux = document.createElement('i');
+                serviceLinux.className = service.linux || 'fab fa-fedoraup'; // Default to Linux icon if not provided
+                serviceLinux.dataset.value = "sudo dnf install " + service.linuxcmd; // Set the value to copy from JSON
+                if (service.linuxcmd) { // Only add click event if linuxcmd is present
+                    serviceLinux.addEventListener('click', function(event) {
+                        event.stopPropagation(); // Prevent the click from bubbling up to the service link
+                        copyToClipboard(serviceLinux.dataset.value);
+                    });
+                } else {
+                    serviceLinux.style.display = 'none'; // Hide if no command is provided
+                }
+
+                var serviceLinuxf = document.createElement('i');
+                serviceLinuxf.className = service.linux || 'fab fa-linux'; // Default to Linux icon if not provided
+                serviceLinuxf.dataset.value = "flatpak install flathub " + service.linuxflatpak; // Set the value to copy from JSON
+                if (service.linuxflatpak) { // Only add click event if linuxcmd is present
+                    serviceLinuxf.addEventListener('click', function(event) {
+                        event.stopPropagation(); // Prevent the click from bubbling up to the service link
+                        copyToClipboard(serviceLinuxf.dataset.value);
+                    });
+                } else {
+                    serviceLinuxf.style.display = 'none'; // Hide if no command is provided
+                }
             
                 // Append the OS icons to the osIconsContainer
-                osIconsContainer.appendChild(serviceLinux);
-                osIconsContainer.appendChild(serviceLinuxf);
                 osIconsContainer.appendChild(serviceWindows);
                 osIconsContainer.appendChild(serviceMacos);
+                osIconsContainer.appendChild(serviceLinux);
+                osIconsContainer.appendChild(serviceLinuxf);
                 
                 // Append the service icon to the subGridItem (not part of the link)
                 subGridItem.appendChild(serviceIcon);
