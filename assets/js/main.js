@@ -100,35 +100,74 @@ fetch('assets/json/solutions.json')
                     serviceMacos.style.display = 'none'; // Hide if no command is provided
                 }
 
-                var serviceLinux = document.createElement('i');
-                serviceLinux.className = service.linux || 'fab fa-fedora'; // Default to Linux icon if not provided
-                serviceLinux.dataset.value = "sudo dnf install " + service.linuxcmd; // Set the value to copy from JSON
-                if (service.linuxcmd) { // Only add click event if linuxcmd is present
-                    serviceLinux.addEventListener('click', function(event) {
+                var serviceDebian = document.createElement('i');
+                serviceDebian.className = service.linux || 'fab fa-debian'; // Default to Linux icon if not provided
+                serviceDebian.dataset.value = "sudo apt install " + service.linuxapt; // Set the value to copy from JSON
+                if (service.linuxapt) { // Only add click event if linuxapt is present
+                    serviceDebian.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
-                        copyToClipboard(serviceLinux.dataset.value);
+                        copyToClipboard(serviceFedora.dataset.value);
                     });
                 } else {
-                    serviceLinux.style.display = 'none'; // Hide if no command is provided
+                    serviceDebian.style.display = 'none'; // Hide if no command is provided
                 }
 
-                var serviceLinuxf = document.createElement('i');
-                serviceLinuxf.className = service.linux || 'fab fa-linux'; // Default to Linux icon if not provided
-                serviceLinuxf.dataset.value = "flatpak install flathub " + service.linuxflatpak; // Set the value to copy from JSON
-                if (service.linuxflatpak) { // Only add click event if linuxcmd is present
-                    serviceLinuxf.addEventListener('click', function(event) {
+                var serviceFedora = document.createElement('i');
+                serviceFedora.className = service.linux || 'fab fa-fedora'; // Default to Linux icon if not provided
+                serviceFedora.dataset.value = "sudo dnf install " + service.linuxdnf; // Set the value to copy from JSON
+                if (service.linuxdnf) { // Only add click event if linuxdnf is present
+                    serviceFedora.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
-                        copyToClipboard(serviceLinuxf.dataset.value);
+                        copyToClipboard(serviceFedora.dataset.value);
                     });
                 } else {
-                    serviceLinuxf.style.display = 'none'; // Hide if no command is provided
+                    serviceFedora.style.display = 'none'; // Hide if no command is provided
+                }
+
+                var serviceSuse = document.createElement('i');
+                serviceSuse.className = service.linux || 'fab fa-suse'; // Default to Linux icon if not provided
+                serviceSuse.dataset.value = "sudo zypper install " + service.linuxzyp; // Set the value to copy from JSON
+                if (service.linuxzyp) { // Only add click event if linuxzyp is present
+                    serviceSuse.addEventListener('click', function(event) {
+                        event.stopPropagation(); // Prevent the click from bubbling up to the service link
+                        copyToClipboard(serviceSuse.dataset.value);
+                    });
+                } else {
+                    serviceSuse.style.display = 'none'; // Hide if no command is provided
+                }
+
+                var serviceRedhat = document.createElement('i');
+                serviceRedhat.className = service.linux || 'fab fa-redhat'; // Default to Linux icon if not provided
+                serviceRedhat.dataset.value = "sudo dnf install " + service.linuxdnf; // Set the value to copy from JSON
+                if (service.linuxdnf) { // Only add click event if linuxdnf is present
+                    serviceRedhat.addEventListener('click', function(event) {
+                        event.stopPropagation(); // Prevent the click from bubbling up to the service link
+                        copyToClipboard(serviceRedhat.dataset.value);
+                    });
+                } else {
+                    serviceRedhat.style.display = 'none'; // Hide if no command is provided
+                }
+
+                var serviceFlatpak = document.createElement('i');
+                serviceFlatpak.className = service.linux || 'fab fa-linux'; // Default to Linux icon if not provided
+                serviceFlatpak.dataset.value = "flatpak install flathub " + service.linuxflatpak; // Set the value to copy from JSON
+                if (service.linuxflatpak) { // Only add click event if linuxflatpak is present
+                    serviceFlatpak.addEventListener('click', function(event) {
+                        event.stopPropagation(); // Prevent the click from bubbling up to the service link
+                        copyToClipboard(serviceFlatpak.dataset.value);
+                    });
+                } else {
+                    serviceFlatpak.style.display = 'none'; // Hide if no command is provided
                 }
             
                 // Append the OS icons to the osIconsContainer
                 osIconsContainer.appendChild(serviceWindows);
                 osIconsContainer.appendChild(serviceMacos);
-                osIconsContainer.appendChild(serviceLinux);
-                osIconsContainer.appendChild(serviceLinuxf);
+                osIconsContainer.appendChild(serviceDebian);
+                osIconsContainer.appendChild(serviceFedora);
+                osIconsContainer.appendChild(serviceRedhat);
+                osIconsContainer.appendChild(serviceSuse);
+                osIconsContainer.appendChild(serviceFlatpak);
                 
                 // Append the service icon to the subGridItem (not part of the link)
                 subGridItem.appendChild(serviceIcon);
