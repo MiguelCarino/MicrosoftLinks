@@ -85,7 +85,7 @@ fetch('assets/json/solutions.json')
                         copyToClipboard(serviceWindows.dataset.value);
                     });
                 } else {
-                    serviceWindows.style.display = 'none'; // Hide if no command is provided
+                    serviceWindows.style.display = 'none';
                 }
             
                 var serviceMacos = document.createElement('i');
@@ -97,7 +97,7 @@ fetch('assets/json/solutions.json')
                         copyToClipboard(serviceMacos.dataset.value);
                     });
                 } else {
-                    serviceMacos.style.display = 'none'; // Hide if no command is provided
+                    serviceMacos.style.display = 'none';
                 }
 
                 var serviceDebian = document.createElement('i');
@@ -109,7 +109,7 @@ fetch('assets/json/solutions.json')
                         copyToClipboard(serviceFedora.dataset.value);
                     });
                 } else {
-                    serviceDebian.style.display = 'none'; // Hide if no command is provided
+                    serviceDebian.style.display = 'none';
                 }
 
                 var serviceFedora = document.createElement('i');
@@ -121,7 +121,7 @@ fetch('assets/json/solutions.json')
                         copyToClipboard(serviceFedora.dataset.value);
                     });
                 } else {
-                    serviceFedora.style.display = 'none'; // Hide if no command is provided
+                    serviceFedora.style.display = 'none';
                 }
 
                 var serviceSuse = document.createElement('i');
@@ -133,7 +133,7 @@ fetch('assets/json/solutions.json')
                         copyToClipboard(serviceSuse.dataset.value);
                     });
                 } else {
-                    serviceSuse.style.display = 'none'; // Hide if no command is provided
+                    serviceSuse.style.display = 'none';
                 }
 
                 var serviceRedhat = document.createElement('i');
@@ -145,7 +145,7 @@ fetch('assets/json/solutions.json')
                         copyToClipboard(serviceRedhat.dataset.value);
                     });
                 } else {
-                    serviceRedhat.style.display = 'none'; // Hide if no command is provided
+                    serviceRedhat.style.display = 'none';
                 }
 
                 var serviceFlatpak = document.createElement('i');
@@ -157,7 +157,7 @@ fetch('assets/json/solutions.json')
                         copyToClipboard(serviceFlatpak.dataset.value);
                     });
                 } else {
-                    serviceFlatpak.style.display = 'none'; // Hide if no command is provided
+                    serviceFlatpak.style.display = 'none';
                 }
             
                 // Append the OS icons to the osIconsContainer
