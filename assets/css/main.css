@@ -1,5 +1,5 @@
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 
 body, html {
     margin: 0;
@@ -85,7 +85,7 @@ body, html {
 
 .sub-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 1rem;
 }
 
@@ -101,7 +101,7 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.5em;
+    padding: 1em;
     border: 1px solid #ccc;
     border-radius: 8px;
     background: white;

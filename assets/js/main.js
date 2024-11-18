@@ -172,8 +172,8 @@ fetch('assets/json/solutions.json')
                 osIconsContainer.appendChild(serviceMacos);
                 osIconsContainer.appendChild(serviceDebian);
                 osIconsContainer.appendChild(serviceFedora);
-                osIconsContainer.appendChild(serviceRedhat);
                 osIconsContainer.appendChild(serviceSuse);
+                osIconsContainer.appendChild(serviceRedhat);
                 osIconsContainer.appendChild(serviceFlatpak);
 
                 // Append the service icon to the subGridItem (not part of the link)
