@@ -67,6 +67,9 @@ fetch('assets/json/solutions.json')
                 var serviceLink = document.createElement('a');
                 serviceLink.href = service.link; // Link to the service
                 serviceLink.textContent = service.name; // Set the link text to the service name
+                
+                var serviceText = document.createElement('span');
+                serviceText.textContent = service.description; // Set the link text to the service name
             
                 var serviceIcon = document.createElement('i');
                 serviceIcon.className = service.icon;
@@ -169,6 +172,9 @@ fetch('assets/json/solutions.json')
                 osIconsContainer.appendChild(serviceSuse);
                 osIconsContainer.appendChild(serviceFlatpak);
                 
+                // Append the service text
+                document.body.appendChild(serviceText);
+
                 // Append the service icon to the subGridItem (not part of the link)
                 subGridItem.appendChild(serviceIcon);
                 
