@@ -6,6 +6,7 @@ fetch('assets/json/solutions.json')
         var allServices = categories.reduce((acc, category) => acc.concat(category.services), []);
         var mainGrid = document.getElementById('main-grid');
         var buttonRow = document.getElementById('button-row');
+        var serviceText = document.getElementById('description');
         var categoryTitle = document.getElementById('category-title');
         var searchInput = document.getElementById('search-input');
         var activeButton = null;
