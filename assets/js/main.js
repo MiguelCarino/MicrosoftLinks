@@ -138,8 +138,8 @@ fetch('assets/json/solutions.json')
 
                 var serviceRedhat = document.createElement('i');
                 serviceRedhat.className = service.linux || 'fab fa-redhat'; // Default to Linux icon if not provided
-                serviceRedhat.dataset.value = "sudo dnf install " + service.linuxdnf; // Set the value to copy from JSON
-                if (service.linuxdnf) { // Only add click event if linuxdnf is present
+                serviceRedhat.dataset.value = "sudo dnf install " + service.linuxrhel; // Set the value to copy from JSON
+                if (service.linuxrhel) { // Only add click event if linuxrhel is present
                     serviceRedhat.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
                         copyToClipboard(serviceRedhat.dataset.value);
