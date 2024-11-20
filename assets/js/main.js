@@ -112,7 +112,7 @@ fetch('assets/json/solutions.json')
                 if (service.linuxapt) { // Only add click event if linuxapt is present
                     serviceDebian.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
-                        copyToClipboard(serviceFedora.dataset.value);
+                        copyToClipboard(serviceDebian.dataset.value);
                     });
                 } else {
                     serviceDebian.style.display = 'none';
