@@ -80,9 +80,9 @@ fetch('assets/json/solutions.json')
             
                 // Create OS icons and add click event listeners
                 var serviceWindows = document.createElement('i');
-                serviceWindows.className = service.windows || 'fab fa-windows'; // Default to Windows icon if not provided
+                serviceWindows.className = service.windows ? 'fab fa-windows' : 'fab fa-windows'; // Default to Windows icon if not provided
                 serviceWindows.dataset.value = "winget install -e --id " + service.windows; // Set the value to copy from JSON
-                serviceWindows.title = "Install winget package";
+                serviceWindows.title = "Install winget package" + (service.windows || '');
                 if (service.windows) { // Only add click event if windows is present
                     serviceWindows.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
@@ -93,16 +93,17 @@ fetch('assets/json/solutions.json')
                 }
             
                 var serviceMacos = document.createElement('i');
-                serviceMacos.className = service.macos || 'fab fa-apple'; // Default to MacOS icon if not provided
+                serviceMacos.className = service.macos ? 'fab fa-apple' : 'fab fa-apple'; // Default to MacOS icon if not provided
                 serviceMacos.title = "Install homebrew package";
-                serviceMacos.dataset.value = "brew install " + service.macos; // Set the value to copy from JSON
+                serviceMacos.dataset.value = "brew install " + (service.macos || ''); // Set the value to copy from JSON
+
                 if (service.macos) { // Only add click event if macos is present
                     serviceMacos.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
                         copyToClipboard(serviceMacos.dataset.value);
                     });
                 } else {
-                    serviceMacos.style.display = 'none';
+                    serviceMacos.style.display = 'none'; // Hide the icon if macos is not present
                 }
 
                 var serviceDebian = document.createElement('i');
