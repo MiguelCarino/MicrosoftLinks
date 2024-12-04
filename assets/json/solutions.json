@@ -20,7 +20,7 @@
         "services": [
             { "name": ".NET", "link": "https://dotnet.microsoft.com/en-us/download", "icon": "fas fa-dot-circle", "value": "dotnet,.net" },
             { "name": "Visual Studio", "link": "https://visualstudio.microsoft.com/downloads/", "icon": "fas fa-code", "value": "Visual Studio"},
-            { "name": "VS Code", "link": "https://code.visualstudio.com/download", "value": "VS Code", "windowscmd": "Microsoft.VisualStudioCode", "macoscmd": "--cask visual-studio-code", "linuxdnf": "#", "linuxapt": "#", "linuxrhel": "#", "linuxzyp": "#", "linuxflatpak": "com.visualstudio.code", "description": "sadas"},
+            { "name": "VS Code", "link": "https://code.visualstudio.com/download", "value": "VS Code", "windows": "Microsoft.VisualStudioCode", "macos": "--cask visual-studio-code", "fedora": "#", "debian": "#", "rhel": "#", "suse": "#", "flatpak": "com.visualstudio.code", "description": "sadas"},
             { "name": "Powershell", "link": "https://github.com/PowerShell/PowerShell", "icon": "fas fa-terminal", "value": "Powershell" },
             { "name": ".NET Framework", "link": "https://dotnet.microsoft.com/en-us/download/dotnet-framework", "icon": "fas fa-cogs", "value": "dotnet,.net,framework" },
             { "name": "C++ Build Tools", "link": "https://visualstudio.microsoft.com/visual-cpp-build-tools/", "icon": "fas fa-tools", "value": "C++ Build Tools" },

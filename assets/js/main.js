@@ -81,9 +81,9 @@ fetch('assets/json/solutions.json')
                 // Create OS icons and add click event listeners
                 var serviceWindows = document.createElement('i');
                 serviceWindows.className = service.windows || 'fab fa-windows'; // Default to Windows icon if not provided
-                serviceWindows.dataset.value = "winget install -e --id " + service.windowscmd; // Set the value to copy from JSON
+                serviceWindows.dataset.value = "winget install -e --id " + service.windows; // Set the value to copy from JSON
                 serviceWindows.title = "Install winget package";
-                if (service.windowscmd) { // Only add click event if windowscmd is present
+                if (service.windows) { // Only add click event if windows is present
                     serviceWindows.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
                         copyToClipboard(serviceWindows.dataset.value);
@@ -95,8 +95,8 @@ fetch('assets/json/solutions.json')
                 var serviceMacos = document.createElement('i');
                 serviceMacos.className = service.macos || 'fab fa-apple'; // Default to MacOS icon if not provided
                 serviceMacos.title = "Install homebrew package";
-                serviceMacos.dataset.value = "brew install " + service.macoscmd; // Set the value to copy from JSON
-                if (service.macoscmd) { // Only add click event if macoscmd is present
+                serviceMacos.dataset.value = "brew install " + service.macos; // Set the value to copy from JSON
+                if (service.macos) { // Only add click event if macos is present
                     serviceMacos.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
                         copyToClipboard(serviceMacos.dataset.value);
@@ -107,9 +107,9 @@ fetch('assets/json/solutions.json')
 
                 var serviceDebian = document.createElement('i');
                 serviceDebian.className = service.linux || 'fab fa-debian'; // Default to Linux icon if not provided
-                serviceDebian.dataset.value = "sudo apt install " + service.linuxapt; // Set the value to copy from JSON
+                serviceDebian.dataset.value = "sudo apt install " + service.debian; // Set the value to copy from JSON
                 serviceDebian.title = "Install Debian package";
-                if (service.linuxapt) { // Only add click event if linuxapt is present
+                if (service.debian) { // Only add click event if debian is present
                     serviceDebian.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
                         copyToClipboard(serviceDebian.dataset.value);
@@ -120,9 +120,9 @@ fetch('assets/json/solutions.json')
 
                 var serviceFedora = document.createElement('i');
                 serviceFedora.className = service.linux || 'fab fa-fedora'; // Default to Linux icon if not provided
-                serviceFedora.dataset.value = "sudo dnf install " + service.linuxdnf; // Set the value to copy from JSON
+                serviceFedora.dataset.value = "sudo dnf install " + service.fedora; // Set the value to copy from JSON
                 serviceFedora.title = "Install Fedora package";
-                if (service.linuxdnf) { // Only add click event if linuxdnf is present
+                if (service.fedora) { // Only add click event if fedora is present
                     serviceFedora.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
                         copyToClipboard(serviceFedora.dataset.value);
@@ -133,9 +133,9 @@ fetch('assets/json/solutions.json')
 
                 var serviceSuse = document.createElement('i');
                 serviceSuse.className = service.linux || 'fab fa-suse'; // Default to Linux icon if not provided
-                serviceSuse.dataset.value = "sudo zypper install " + service.linuxzyp; // Set the value to copy from JSON
+                serviceSuse.dataset.value = "sudo zypper install " + service.suse; // Set the value to copy from JSON
                 serviceSuse.title = "Install SUSE package";
-                if (service.linuxzyp) { // Only add click event if linuxzyp is present
+                if (service.suse) { // Only add click event if suse is present
                     serviceSuse.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
                         copyToClipboard(serviceSuse.dataset.value);
@@ -146,9 +146,9 @@ fetch('assets/json/solutions.json')
 
                 var serviceRedhat = document.createElement('i');
                 serviceRedhat.className = service.linux || 'fab fa-redhat'; // Default to Linux icon if not provided
-                serviceRedhat.dataset.value = "sudo dnf install " + service.linuxrhel; // Set the value to copy from JSON
+                serviceRedhat.dataset.value = "sudo dnf install " + service.rhel; // Set the value to copy from JSON
                 serviceRedhat.title = "Install RHEL package";
-                if (service.linuxrhel) { // Only add click event if linuxrhel is present
+                if (service.rhel) { // Only add click event if rhel is present
                     serviceRedhat.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
                         copyToClipboard(serviceRedhat.dataset.value);
@@ -160,8 +160,8 @@ fetch('assets/json/solutions.json')
                 var serviceFlatpak = document.createElement('i');
                 serviceFlatpak.className = service.linux || 'fab fa-linux'; // Default to Linux icon if not provided
                 serviceFlatpak.title = "Install Flatpak package";
-                serviceFlatpak.dataset.value = "flatpak install flathub " + service.linuxflatpak; // Set the value to copy from JSON
-                if (service.linuxflatpak) { // Only add click event if linuxflatpak is present
+                serviceFlatpak.dataset.value = "flatpak install flathub " + service.flatpak; // Set the value to copy from JSON
+                if (service.flatpak) { // Only add click event if flatpak is present
                     serviceFlatpak.addEventListener('click', function(event) {
                         event.stopPropagation(); // Prevent the click from bubbling up to the service link
                         copyToClipboard(serviceFlatpak.dataset.value);
