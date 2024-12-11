@@ -1,6 +1,6 @@
 # MicrosoftLinks
 Straight links to Microsoft services without corpo bs\
-Website: https://miguelcarino.github.io/MicrosoftLinks/\
+Website: https://miguelcarino.github.io/MicrosoftLinks/
 ![image](https://github.com/user-attachments/assets/7ec94bc8-fe4e-496a-b395-5c8848960609)\
 
 Searching updates url, which can be shared and show the results of its query.\
